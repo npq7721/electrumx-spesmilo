@@ -1269,6 +1269,23 @@ class Dogecoin(AuxPowMixin, Coin):
     REORG_LIMIT = 2000
     DESERIALIZER = lib_tx.DeserializerAuxPowSegWit
 
+class Dingocoin(AuxPowMixin, Coin):
+    NAME = "Dingocoin"
+    SHORTNAME = "DINGO"
+    NET = "mainnet"
+    XPUB_VERBYTES = bytes.fromhex("02facafd")
+    XPRV_VERBYTES = bytes.fromhex("02fac398")
+    P2PKH_VERBYTE = bytes.fromhex("1e")
+    P2SH_VERBYTES = (bytes.fromhex("16"),)
+    WIF_BYTE = bytes.fromhex("9e")
+    GENESIS_HASH = ('1a91e3dace36e2be3bf030a65679fe82'
+                    '1aa1d6ef92e7c9902eb318182c355691')
+    TX_COUNT = 1423060,
+    TX_COUNT_HEIGHT = 1187168
+    TX_PER_BLOCK = 20
+    REORG_LIMIT = 2000
+    DESERIALIZER = lib_tx.DeserializerAuxPowSegWit
+
 
 class DogecoinTestnet(Dogecoin):
     NAME = "Dogecoin"
